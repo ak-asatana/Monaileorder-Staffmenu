@@ -10,6 +10,13 @@
 </head>
 <body>
 
+<h2>従業員設定メニュー</h2>
+<button onclick="window.open('https://script.google.com/macros/s/AKfycbxxxxx/exec', '_blank')">
+  チェックボックス設定ページを開く
+</button>
+
+  
+<!-- 
 <h2>スプレッドシートと同期するチェックボックス</h2>
 
 <label>
@@ -17,16 +24,19 @@
 </label>
 
 <p class="status" id="statusText">状態を読み込み中...</p>
-
+-->
+  
 <script>
 // --- 設定：スプレッドシート側のWebアプリURLを指定 ---
+/**
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxyyqBQDnaMOcgKsD1bdujOQkEn2i1w-ZtJnqgQG3K1RqREBd3Cl_LEVLxj2YBzvTCQ/exec';
 const checkbox = document.getElementById('syncCheckbox');
 const statusText = document.getElementById('statusText');
+*/
 
 /**
  * ページ読み込み時に現在の状態を取得
- */
+
 window.addEventListener('load', async () => {
   try {
     const res = await fetch(SCRIPT_URL);
@@ -38,10 +48,10 @@ window.addEventListener('load', async () => {
     statusText.textContent = '読み込みエラー';
   }
 });
-
+ */
 /**
  * チェックON/OFF変更時にスプレッドシートへ送信
- */
+
 checkbox.addEventListener('change', async () => {
   const value = checkbox.checked ? 1 : 0;
   statusText.textContent = '更新中...';
@@ -58,10 +68,12 @@ checkbox.addEventListener('change', async () => {
     statusText.textContent = '送信エラー';
   }
 });
+   */
 </script>
 
 </body>
 </html>
+
 
 
 
