@@ -1711,7 +1711,7 @@
   });
 
  //-GAS API のURL-----------
-  const API_URL = "https://script.google.com/macros/s/AKfycbzy1mmcYeVJvV_qSXfKexEHGjOy1UbZIFPnPO4o9X1k5lVzSjtVVIPMamA5L3bv7N0gBA/exec";
+  const API_URL = "https://script.google.com/macros/s/AKfycbxoMLQslcQH4bnvBprbBEkNY8as0Be2vYBSvWzSmKkuhja-dX2AMVqphLxdZNV2sAXjjw/exec";
 
  //-Googleスプレッドシートとの連動用 ------------------
   const checkbox = document.getElementById('syncCheckbox');
@@ -1849,7 +1849,7 @@ console.log('トグルメニュー直後')
   calculateTotal();
 
 // OrderPreviewボタンクリック時の処理
-  document.getElementById('OrderPreview').addEventListener('click', function (event) {
+  document.getElementById('OrderPreview').addEventListener('click', async function (event) {
     event.preventDefault();
 
    //-注文確認画面表示前に最新状態を読み取る---------
@@ -2077,5 +2077,6 @@ console.log('トグルメニュー直後')
 
 </body>
 </html>
+
 
 
