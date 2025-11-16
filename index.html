@@ -1792,9 +1792,12 @@
 
 
 <script>
+
+console.log('トグルメニュー直前')  
+  
 document.addEventListener('DOMContentLoaded', function () {
   const isIOS = /iP(hone|od|ad)/.test(navigator.userAgent) && !window.MSStream;
-
+  console.log('トグルメニュー内部') 
 // toggleMenuの動作（クリック＋iOS用タッチ）
   const toggleMenus = document.querySelectorAll('.toggleMenu');
   const menuItems = document.querySelectorAll('.menuItems');
@@ -1824,7 +1827,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   });
-
+console.log('トグルメニュー直後') 
+  
 // 合計金額計算
   const form = document.getElementById('OrderForm');
   const selects = form.querySelectorAll('select[data-price]');
@@ -2073,4 +2077,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </body>
 </html>
+
 
